@@ -25,9 +25,6 @@
         color: #ccc;
         font-style: italic;
       }
-      nav{
-        color: #ccc;
-      }
       h1{
         margin-bottom: 0px;
       }
@@ -55,7 +52,7 @@
   <body>
 
     <header>
-      <img src="http://kickstart.bikeexif.com/wp-content/themes/bikeexif/images/random/bike_exif_logo_5b.jpg">
+      <a href="#"><img src="http://kickstart.bikeexif.com/wp-content/themes/bikeexif/images/random/bike_exif_logo_5b.jpg"></a>
     </header>
     <div id="app">
       <div class="loading">Loading ...</div>
@@ -76,7 +73,6 @@
 
     <script type="text/template" id="post">
       <article>
-       <nav><i class="fa fa-home"></i> <a class="home" href="#">Home</a></nav>
        <h1><%=post.title%></h1>
        <p class="date-time">Posted by <%=post.author%> on <time><%=post.publishedDate%></time></p>
        <div role="main"><%=post.content%></div>
