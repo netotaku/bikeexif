@@ -144,6 +144,7 @@
       $('#app').on('click', function(e){
         $target = $(e.target);
         if($target.hasClass('more')){
+          window.scrollTo(0,0);
           router.navigate($target.attr('href'), { trigger: true });
         }
       });
