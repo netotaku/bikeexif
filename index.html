@@ -95,7 +95,7 @@
       function link(url){
         var parser = document.createElement('a');
         parser.href = url;
-        return parser.pathname;
+        return parser.pathname.replace('bikeexif/','');;
       }
 
       function feed(then){
@@ -125,10 +125,8 @@
 
       var router = new AppRouter;
 
-
       router.on('route:default', function(actions) {
         feed(function(data){
-          // console.log(data.feed.entries);
           var t = _.template($("#list").html());
           $("#app").html(t({items:data.feed.entries}));
         });
@@ -148,12 +146,8 @@
       Backbone.history.start();
 
       $('#app').on('click', function(e){
-
         $target = $(e.target);
-
         if($target.hasClass('more')){
-          // e.preventDefault();
-          console.log($target.attr('href'));
           router.navigate($target.attr('href'), { trigger: true });
         }
       });
